@@ -18,7 +18,7 @@ describe( "Creating a single resource's routes", function() {
   };
 
   var routes = resource({
-    resource : "thing",
+    name : "thing",
     controller : controller
   });
 
@@ -53,7 +53,7 @@ describe( "Routes with a namespace", function() {
   };
 
   var routes = resource({
-    resource : "thing",
+    name : "thing",
     controller : controller,
     namespace : "stuff"
   });
@@ -74,10 +74,10 @@ describe( "Nested resources", function() {
   };
 
   var routes = resource({
-    resource : "thing",
+    name : "thing",
     controller : controller,
     sub : {
-      resource : "widget",
+      name : "widget",
       controller : subController
     }
   });
@@ -89,5 +89,21 @@ describe( "Nested resources", function() {
   it( "should nest sub resources under a single parent", function() {
     expect( routes[1] ).to.have.property( "path", "/things/{thing_id}/widgets" );
     expect( routes[2] ).to.have.property( "path", "/things/{thing_id}/widgets/{widget_id}" );
+  });
+});
+
+describe( "Pluralization", function() {
+  var controller = {
+    index : utils.noop
+  };
+
+  var routes = resource({
+    name : "thing",
+    plural : "manyThings",
+    controller : controller
+  });
+
+  it( "should allow manually defined inflection", function() {
+    expect( routes[0] ).to.have.property( "path", "/manyThings" );
   });
 });

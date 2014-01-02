@@ -17,6 +17,7 @@ function Resource( name, opts ) {
   this.name = name;
   this.namespace = opts.namespace ? "/" + opts.namespace : "";
   this.parent = opts.parent;
+  this.plural = opts.plural;
 }
 
 Resource.prototype = {
@@ -34,7 +35,7 @@ Resource.prototype = {
     ].join( "" );
   },
   pl : function() {
-    return pluralize.plural( this.name );
+    return this.plural || pluralize.plural( this.name );
   },
   s : function() {
     return pluralize.singular( this.name );
@@ -58,7 +59,7 @@ function makeRoute( resource, controller, action ) {
 }
 
 function getRoutes( options ) {
-  var resource = new Resource( options.resource, options ),
+  var resource = new Resource( options.name, options ),
     routes = Object.keys( routeDefs )
                .map( makeRoute.bind( null, resource, options.controller ) )
                .filter(function( x ) { return x; });
