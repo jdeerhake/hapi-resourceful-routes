@@ -15,7 +15,7 @@ var routeDefs = {
 
 function Resource( name, opts ) {
   this.name = name;
-  this.namespace = opts.namespace;
+  this.namespace = opts.namespace ? "/" + opts.namespace : "";
   this.parent = opts.parent;
 }
 
