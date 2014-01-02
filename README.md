@@ -1,7 +1,7 @@
 hapi-resourceful
 ================
 
-Generates Rails-y resouceful routes for use with the [Hapi](http://spumko.github.io/) router.
+Generates Rails-y resourceful routes for use with the [Hapi](http://spumko.github.io/) router.
 
 Usage
 -----
@@ -64,7 +64,7 @@ Controller actions are mapped as follows:
 Nesting
 -------
 
-In order to nest on resource inside another, include another resource definition using the key sub:
+In order to nest a resource inside another, include another resource definition using the key sub:
 
 ```javascript
 var resource = require( "hapi-resourceful" )
@@ -94,8 +94,8 @@ Options
 
   - `name` (required) - Singular name of resource
   - `controller` (required) - Object containing one or more handler functions OR Hapi route config objects
-  - `namespace` - String containing a namespace to prefix. (eg `admin` would give the route `/admin/things/{thing_id}`)
-  - `plural` - String containing the pluralization of the name which will override the automatically generated guess
+  - `namespace` - String containing a namespace to prefix to each route. (eg `admin` would give the route `/admin/things/{thing_id}`)
+  - `plural` - String containing the pluralization of the name to override the automatically generated guess
   - `sub` - Another object containing these options to describe a nested resource
 
 
