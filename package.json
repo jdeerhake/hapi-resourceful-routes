@@ -1,0 +1,39 @@
+{
+  "name": "hapi-resourceful",
+  "description": "Resourceful route generation for hapi.js",
+  "version": "0.0.0",
+  "author": "John Deerhake <jdeerhake@gmail.com>",
+  "contributors": [],
+  "repository": "git@github.com:jdeerhake/hapi-resourceful.git",
+  "bugs": {
+    "url": "https://github.com/jdeerhake/hapi-resourceful/issues"
+  },
+  "main": "index",
+  "keywords": [
+    "hapi",
+    "plugin",
+    "routes",
+    "routing",
+    "resourceful"
+  ],
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "pluralize": "0.0.6",
+    "mustache": "~0.8.0"
+  },
+  "peerDependencies": {
+    "hapi": "1.x.x"
+  },
+  "devDependencies": {
+    "expect.js": "~0.2.0"
+  },
+  "scripts": {},
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/jdeerhake/hapi-resourceful/master/LICENSE"
+    }
+  ]
+}
