@@ -1,7 +1,7 @@
 {
   "name": "hapi-resourceful",
   "description": "Resourceful route generation for hapi",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "John Deerhake <jdeerhake@gmail.com>",
   "contributors": [],
   "repository": "git@github.com:jdeerhake/hapi-resourceful.git",

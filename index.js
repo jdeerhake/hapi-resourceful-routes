@@ -1,8 +1,6 @@
 var pluralize = require( "pluralize" ),
   Mustache = require( "mustache" );
 
-Mustache.tags = [ "<%", "%>" ];
-
 var routeDefs = {
   index   : { method : "GET"   , path : "/<% pl %>"     },
   "new"   : { method : "GET"   , path : "/<% pl %>/new" },
@@ -12,6 +10,11 @@ var routeDefs = {
   update  : { method : "PUT"   , path : "/<% pl %>/{<% s %>_id}"      },
   destroy : { method : "DELETE", path : "/<% pl %>/{<% s %>_id}"      }
 };
+
+function render( tmpl, obj ) {
+  var tmpl = "{{=<% %>=}}" + tmpl;
+  return Mustache.render( tmpl, obj );
+}
 
 function Resource( name, opts ) {
   this.name = name;
@@ -31,7 +34,7 @@ Resource.prototype = {
     return [
       this.namespace,
       this.parent ? this.parent.path( "show" ) : "",
-      Mustache.render( routeDefs[ action ].path, this )
+      render( routeDefs[ action ].path, this )
     ].join( "" );
   },
   pl : function() {
