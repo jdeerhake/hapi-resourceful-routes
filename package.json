@@ -1,7 +1,7 @@
 {
   "name": "hapi-resourceful",
   "description": "Resourceful route generation for hapi",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "John Deerhake <jdeerhake@gmail.com>",
   "contributors": [],
   "repository": "git@github.com:jdeerhake/hapi-resourceful.git",
@@ -24,7 +24,7 @@
     "mustache": "~0.8.0"
   },
   "peerDependencies": {
-    "hapi": "1.x.x"
+    "hapi": ">1.x.x"
   },
   "devDependencies": {
     "mocha": "~1.16.2",
