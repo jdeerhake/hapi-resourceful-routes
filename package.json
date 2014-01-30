@@ -27,10 +27,11 @@
     "hapi": ">1.x.x"
   },
   "devDependencies": {
-    "mocha": "~1.16.2",
-    "expect": "0.0.2"
+    "jasmine-node": "~1.13.0"
   },
-  "scripts": {},
+  "scripts": {
+    "test" : "jasmine-node --autotest ."
+  },
   "licenses": [
     {
       "type": "MIT",
