@@ -1,5 +1,5 @@
-hapi-resourceful
-================
+hapi-resourceful-routes
+=======================
 
 Generates Rails-y resourceful routes for use with the [Hapi](http://spumko.github.io/) router.
 
