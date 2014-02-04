@@ -1,12 +1,12 @@
 {
-  "name": "hapi-resourceful",
+  "name": "hapi-resourceful-routes",
   "description": "Resourceful route generation for hapi",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "John Deerhake <jdeerhake@gmail.com>",
   "contributors": [],
-  "repository": "git@github.com:jdeerhake/hapi-resourceful.git",
+  "repository": "git@github.com:jdeerhake/hapi-resourceful-routes.git",
   "bugs": {
-    "url": "https://github.com/jdeerhake/hapi-resourceful/issues"
+    "url": "https://github.com/jdeerhake/hapi-resourceful-routes/issues"
   },
   "main": "index",
   "keywords": [
@@ -35,7 +35,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://raw.github.com/jdeerhake/hapi-resourceful/master/LICENSE"
+      "url": "https://raw.github.com/jdeerhake/hapi-resourceful-routes/master/LICENSE"
     }
   ]
 }
