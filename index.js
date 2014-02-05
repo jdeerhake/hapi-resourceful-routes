@@ -1,1 +1,1 @@
-module.exports = require( "src/resource" );
+module.exports = require( "./src/resource" );
